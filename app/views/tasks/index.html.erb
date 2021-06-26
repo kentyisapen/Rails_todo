@@ -1,18 +1,24 @@
 <h1>一言掲示板</h1>
   <div class="sbody">
+    
+    <div class="addbtn"><%= link_to '追加', new_task_path, {class:"btn btn--blue btn--radius"} %></div>
+    
+    <%= will_paginate %>
+    
     <% @tasks.each do |task| %>
     <div class="adata">
-      <div><%= task.title %></div>
+      <div><h4><%= task.title %></h4></div>
       <div>
         <%= simple_format(task.content, class: "text") %>
         <%= task.created_at.in_time_zone('Tokyo') %>
       </div>
       <div>
-        <%= link_to '編集', edit_task_path(task) %>
-        <%= link_to '削除', task_path(task), method: :delete %>
+        <%= link_to '編集', edit_task_path(task),{class:"btn btn--blue btn--radius"} %>
+        <%= link_to '削除', task_path(task), {method: :delete,class:"btn btn--blue btn--radius"} %>
       </div>
     </div>
     <% end %>
-  
-    <div class="spbutton"><%= link_to '追加', new_task_path %></div>
+    
+    <%= will_paginate %>
+    
 </div>

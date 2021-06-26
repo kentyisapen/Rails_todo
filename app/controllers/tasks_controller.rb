@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.paginate(page: params[:page]).reverse_order
   end
   
   def new

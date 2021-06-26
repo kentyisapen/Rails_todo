@@ -1,11 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 h1 {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  
+}
+
+h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.pagination {
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .sbody {
@@ -14,10 +25,8 @@ h1 {
 
 .adata {
   margin: 10px 20px 20px;
-}
-
-.adata {
   border: 1px solid;
+  border-radius: 10px;
   width: 640px;
 }
 
@@ -25,8 +34,15 @@ div {
   padding: 5px 10px;
 }
 
-.spbutton {
-  padding: 10px 20px 20px;
+.addbtn {
+  padding-left: 20px;
+}
+
+.btn--blue,
+a.btn--blue {
+  color: #fff;
+  height: auto;
+  background-color: #66ccff;
 }
 
 .text {
