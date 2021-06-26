@@ -1,20 +1,18 @@
-<h1>タスク一覧</h1>
-<table>
-  <thead>
-    <tr>
-      <th>タスク名</th>
-    </tr>
-  </thead>
-  <tbody>
+<h1>一言掲示板</h1>
+  <div class="sbody">
     <% @tasks.each do |task| %>
-    <tr>
-      <td><p><%= task.title %></p></td>
-      <td><%= task.content %></td>
-      <td><%= task.created_at.in_time_zone('Tokyo') %></td>
-      <td><%= link_to '編集', edit_task_path(task) %></td>
-      <td><%= link_to '削除', task_path(task), method: :delete %></td>
-    </tr>
+    <div class="adata">
+      <div><%= task.title %></div>
+      <div>
+        <%= simple_format(task.content) %>
+        <%= task.created_at.in_time_zone('Tokyo') %>
+      </div>
+      <div>
+        <%= link_to '編集', edit_task_path(task) %>
+        <%= link_to '削除', task_path(task), method: :delete %>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
-<%= link_to '追加', new_task_path %>
+  
+    <div class="spbutton"><%= link_to '追加', new_task_path %></div>
+</div>
