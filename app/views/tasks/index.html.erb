@@ -4,7 +4,7 @@
     <div class="adata">
       <div><%= task.title %></div>
       <div>
-        <%= simple_format(task.content) %>
+        <%= simple_format(task.content, class: "text") %>
         <%= task.created_at.in_time_zone('Tokyo') %>
       </div>
       <div>

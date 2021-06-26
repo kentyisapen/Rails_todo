@@ -1,9 +1,11 @@
-<h1>タスク編集</h1>
+<h1>内容編集</h1>
+<div class="sbody">
 <%= form_for(@task) do |f| %>
   <div><%= f.label :title%></div>
   <div><%= f.text_field :title %></div>
   <div><%= f.label :content %></div>
-  <div><%= f.text_area :content %></div>
+  <div><%= f.text_area :content, size:"50x10" %></div>
   <div><%= f.submit %></div>
 <% end %>
 <div class="spbutton"><%= link_to '戻る', tasks_path %></div>
+</div>
