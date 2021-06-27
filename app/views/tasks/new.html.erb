@@ -1,11 +1,12 @@
 <h1>新規作成</h1>
+<%= render 'shared/error_messages' %>
 <div class="sbody">
 <%= form_for(@task) do |f| %>
   <div><%= f.label :title %></div>
-  <div><%= f.text_field :title %></div>
+  <div><%= f.text_field :title, class:'form-control' %></div>
   <div><%= f.label :content %></div>
-  <div><%= f.text_area :content, size:"50x10"%></div>
-  <div><%= f.submit %></div>
+  <div><%= f.text_area :content, size:"50x10", class:'form-control'%></div>
+  <div><%= f.submit "Post!", class:"btn btn--blue btn--radius" %></div>
 <% end %>
 <div><%= link_to '戻る', tasks_path ,{class:"btn btn--blue btn--radius"}%></div>
 </div>

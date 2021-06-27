@@ -2,9 +2,9 @@
   <div class="sbody">
     
     <div class="addbtn"><%= link_to '追加', new_task_path, {class:"btn btn--blue btn--radius"} %></div>
-    
+    <div>
     <%= will_paginate %>
-    
+    </div>
     <% @tasks.each do |task| %>
     <div class="adata">
       <div><h4><%= task.title %></h4></div>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <% end %>
-    
+    <div>
     <%= will_paginate %>
-    
+    </div>
 </div>
